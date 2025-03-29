@@ -55,3 +55,23 @@ class ModelTrainerConfig:
     _max_depth = MIN_SAMPLES_SPLIT_MAX_DEPTH
     _criterion = MIN_SAMPLES_SPLIT_CRITERION
     _random_state = MIN_SAMPLES_SPLIT_RANDOM_STATE
+
+
+@dataclass
+class ModelEvaluationConfig:
+    changed_threshold_score: float = MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE
+    bucket_name: str = MODEL_BUCKET_NAME
+    s3_model_key_path: str = MODEL_FILE_NAME    
+
+@dataclass
+class ModelPusherConfig:
+    model_store_path: str = MODEL_STORE_PATH
+
+@dataclass
+class VehiclePredictorConfig:
+    """
+    Configuration for Vehicle Data Prediction.
+    Supports both Local 'S3' Storage and Real S3 Bucket.
+    """
+    model_bucket_name: str = MODEL_BUCKET_NAME  # Defined in constants
+    model_file_path: str = MODEL_FILE_NAME        

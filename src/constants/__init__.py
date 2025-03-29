@@ -9,7 +9,7 @@ MONGODB_URL_KEY = "MONGODB_URL"
 PIPELINE_NAME: str = ""
 ARTIFACT_DIR: str = "artifact"
 
-MODEL_FILE_NAME = "model.pkl"
+MODEL_FILE_NAME = "best_model.pkl"
 
 TARGET_COLUMN = "Response"
 CURRENT_YEAR = date.today().year
@@ -57,3 +57,20 @@ MODEL_TRAINER_MIN_SAMPLES_LEAF: int = 6
 MIN_SAMPLES_SPLIT_MAX_DEPTH: int = 10
 MIN_SAMPLES_SPLIT_CRITERION: str = 'entropy'
 MIN_SAMPLES_SPLIT_RANDOM_STATE: int = 101
+
+
+
+"""
+MODEL Evaluation related constants
+"""
+MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float = 0.02
+MODEL_BUCKET_NAME = ""
+MODEL_PUSHER_S3_KEY = ""
+
+
+MODEL_STORE_PATH = "s3/best_model.pkl"
+
+
+
+APP_HOST = "0.0.0.0"
+APP_PORT = 5000

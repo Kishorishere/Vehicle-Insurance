@@ -1,2 +1,2 @@
 # Vehicle-Insurance
-A complete end to end ML project to maintain vehicle insurance data.
+This is a vehicle insurance prediction app which narrows down the demography of people that might buy insurance for their vehicle.
